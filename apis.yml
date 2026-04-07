@@ -4,8 +4,7 @@ url: >-
 apis:
   - aid: boeing:boeing
     name: Boeing
-    tags:
-      - API
+    tags: []
     humanURL: ' https://developer.boeing.com/'
     properties:
       - url: ' https://developer.boeing.com/'
