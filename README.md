@@ -1,42 +1,44 @@
-# Boeing (boeing)
-Boeing is an American multinational corporation that designs, manufactures, and sells airplanes, rotorcraft, rockets, satellites, and telecommunications equipment. The company also provides leasing and product support services. Boeing is one of the world's largest aerospace manufacturers and is known for producing commercial jetliners, military aircraft, and space systems. With a long history of innovation and technological advancements, Boeing plays a crucial role in shaping the future of air travel and space exploration.
+# Boeing
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/boeing/refs/heads/main/apis.yml)
+Boeing is an American multinational corporation that designs, manufactures, and sells airplanes, rotorcraft, rockets, satellites, and telecommunications equipment. Boeing Developer Tools provides aviation data APIs powered by Jeppesen aeronautical databases for flight operations, dispatch, and aviation applications.
 
-## Scope
-
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
-
-## Tags:
-
- - Airplanes, Rockets, Satellites, Telecommunications
-
-## Timestamps
-
-- **Created:** 2025-02-24 
-- **Modified:** 2025-02-24 
+**URL:** [View APIs.yml](https://raw.githubusercontent.com/api-evangelist/boeing/refs/heads/main/apis.yml)
 
 ## APIs
 
-### Boeing
-INNOVATION TAKES FLIGHT WITH BOEING DEVELOPER TOOLS 
+### Boeing Aircraft Models API
+Model characteristics for commercial and business aviation aircraft including ICAO/IATA codes, engine specifications, wingspan, weight, and height. Updated on the 28-day AIRAC cycle.
 
-**Human URL:** [ https://developer.boeing.com/]( https://developer.boeing.com/)
+### Boeing Airports and Aerodromes API
+Current, worldwide aerodrome data from Jeppesen's aeronautical database for global flight operations.
 
+### Boeing Airspaces API
+Detailed, current information about airspace classifications and boundaries worldwide for flight planning.
 
-#### Tags:
+### Boeing Parts API
+Search and request price and availability for specific Boeing aircraft parts supporting MRO operations.
 
- - API
+### Boeing Flight Events API (Beta)
+Real-time insights into worldwide flight events for flight tracking and operational control systems.
 
-#### Properties
+### Boeing NOTAMs API
+Access to Jeppesen's global Notices to Air Missions database for flight planning and safety.
 
-- [Documentation]( https://developer.boeing.com/)
+### Boeing Runway Monitor API
+Active runway information for arrivals and departures at airports worldwide.
+
+### Boeing Standard Minimums API
+Worldwide instrument approach standard minimums for airports supporting flight dispatch.
+
+### Boeing Taxi Time API
+Current taxi time information at airports worldwide for departure timing and gate scheduling optimization.
+
+## Links
+
+- [Website](https://www.boeing.com)
+- [Developer Portal](https://developer.boeing.com/)
+- [API Directory](https://developer.boeing.com/apis)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+- **Kin Lane** - kinlane@gmail.com
