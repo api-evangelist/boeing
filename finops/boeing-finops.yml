@@ -1,207 +1,87 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Boeing
+providerId: boeing
+created: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - FinOps
+  - FOCUS
+  - Aviation
+  - Aerospace
+description: 'FOCUS-aligned FinOps placeholder for Boeing: not a developer-facing platform. Spend
+  with Boeing flows through commercial-airplane purchase contracts, defense / space programs, and
+  services / digital subscriptions (Boeing Global Services, Jeppesen, ForeFlight, Digital Aviation
+  Solutions). No public per-API billing surface.'
+sources:
+  - https://www.boeing.com
+notes: Boeing has no public API billing surface; reconcile against the active contract for actual
+  fee structure.
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-provider: Boeing
-providerId: boeing
-publisherName: Boeing
-serviceCategory: API
-created: '2026-05-04'
-modified: '2026-05-04'
-tags:
-  - Aviation
-  - Airplanes
-  - Aerospace
-  - Flight
-  - Aeronautical
-  - FinOps
-  - Cost Management
-  - FOCUS
-description: FinOps framework definition for the Boeing API surface. Provides a FOCUS-aligned mapping
-  for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+publisherName: The Boeing Company
+serviceCategory: Aerospace / Aviation Services
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Capital Purchase + Services Subscription (Negotiated)
+  billingFrequency: Per-Contract
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
+    - Usage
     - Tax
-    - Credit
     - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
   ServiceName: Boeing
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Aerospace
   ProviderName: Boeing
-  PublisherName: Boeing
-  InvoiceIssuerName: Boeing
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: The Boeing Company
+  InvoiceIssuerName: The Boeing Company
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: aircraft_purchases
+    unit: aircraft
+    aggregation: count
+    dimensions:
+      - model
+      - configuration
+  - name: services_subscription
+    unit: year
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
+      - product
+      - tail_number
+  - name: jeppesen_subscriptions
+    unit: year
+    aggregation: sum
+    dimensions:
+      - product
       - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
+  - name: foreflight_seats
+    unit: seat
+    aggregation: max
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
       - tier
-apis:
-  - name: Boeing Aircraft Models API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Aircraft
-      - Models
-      - Jeppesen
-    serviceName: Boeing Aircraft Models API
-    serviceCategory: API
-  - name: Boeing Airports and Aerodromes API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Airports
-      - Aerodromes
-      - Jeppesen
-    serviceName: Boeing Airports and Aerodromes API
-    serviceCategory: API
-  - name: Boeing Airspaces API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Airspace
-      - Flight Planning
-    serviceName: Boeing Airspaces API
-    serviceCategory: API
-  - name: Boeing Parts API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Parts
-      - MRO
-      - Maintenance
-    serviceName: Boeing Parts API
-    serviceCategory: API
-  - name: Boeing Flight Events API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Flight
-      - Events
-      - Real-Time
-      - Tracking
-    serviceName: Boeing Flight Events API
-    serviceCategory: API
-  - name: Boeing NOTAMs API
-    baseURL: ''
-    tags:
-      - Aviation
-      - NOTAMs
-      - Safety
-      - Flight Planning
-      - Jeppesen
-    serviceName: Boeing NOTAMs API
-    serviceCategory: API
-  - name: Boeing Runway Monitor API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Runway
-      - Airports
-      - Operations
-    serviceName: Boeing Runway Monitor API
-    serviceCategory: API
-  - name: Boeing Standard Minimums API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Minimums
-      - Instrument
-      - Flight Planning
-    serviceName: Boeing Standard Minimums API
-    serviceCategory: API
-  - name: Boeing Taxi Time API
-    baseURL: ''
-    tags:
-      - Aviation
-      - Taxi
-      - Airports
-      - Operations
-      - Flight Planning
-    serviceName: Boeing Taxi Time API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+principles:
+  - name: Visibility
+    description: Use Boeing customer-services portals (Toolbox / MyBoeingFleet) and Jeppesen /
+      ForeFlight admin consoles to track active subscriptions and per-tail entitlements.
+  - name: Allocation
+    description: Map services subscriptions and digital licenses to consuming fleets / pilot
+      groups for chargeback against the bundled Boeing invoice.
+  - name: Optimization
+    description: Reclaim unused Jeppesen / ForeFlight seats during annual renewal; align Digital
+      Aviation Solutions subscriptions with active fleet composition; consolidate vendors where
+      Boeing Global Services covers the same scope.
+  - name: Accountability
+    description: Designate a Boeing services contract owner per fleet; review utilization
+      quarterly with Boeing Global Services and Jeppesen account teams.
 maintainers:
   - FN: Kin Lane
-    email: kinlane@gmail.com
+    email: kin@apievangelist.com

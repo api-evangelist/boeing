@@ -4,126 +4,36 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Boeing
 providerId: boeing
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Aviation
-  - Airplanes
   - Aerospace
-  - Flight
-  - Aeronautical
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Boeing API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: Boeing does not publish a public API rate-limit policy. Boeing's commercial, defense, and
+  services businesses operate under contract; integration controls live inside the relevant
+  enterprise / fleet agreement (Boeing Global Services, Jeppesen, Digital Aviation Solutions,
+  ForeFlight) rather than on a public developer portal.
+sources:
+  - https://www.boeing.com
+notes: No public Boeing API rate-limit documentation. Reconcile against the active enterprise / fleet
+  contract or product-specific developer documentation (Jeppesen, ForeFlight) when applicable.
 responseCodes:
   throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Boeing Aircraft Models API
-      - Boeing Airports and Aerodromes API
-      - Boeing Airspaces API
-      - Boeing Parts API
-      - Boeing Flight Events API
-      - Boeing NOTAMs API
-      - Boeing Runway Monitor API
-      - Boeing Standard Minimums API
-      - Boeing Taxi Time API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Boeing Aircraft Models API
-      - Boeing Airports and Aerodromes API
-      - Boeing Airspaces API
-      - Boeing Parts API
-      - Boeing Flight Events API
-      - Boeing NOTAMs API
-      - Boeing Runway Monitor API
-      - Boeing Standard Minimums API
-      - Boeing Taxi Time API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Boeing Aircraft Models API
-      - Boeing Airports and Aerodromes API
-      - Boeing Airspaces API
-      - Boeing Parts API
-      - Boeing Flight Events API
-      - Boeing NOTAMs API
-      - Boeing Runway Monitor API
-      - Boeing Standard Minimums API
-      - Boeing Taxi Time API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Boeing Aircraft Models API
-      - Boeing Airports and Aerodromes API
-      - Boeing Airspaces API
-      - Boeing Parts API
-      - Boeing Flight Events API
-      - Boeing NOTAMs API
-      - Boeing Runway Monitor API
-      - Boeing Standard Minimums API
-      - Boeing Taxi Time API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
+  - name: Boeing Services / Digital APIs
     scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Boeing Aircraft Models API
-      - Boeing Airports and Aerodromes API
-      - Boeing Airspaces API
-      - Boeing Parts API
-      - Boeing Flight Events API
-      - Boeing NOTAMs API
-      - Boeing Runway Monitor API
-      - Boeing Standard Minimums API
-      - Boeing Taxi Time API
+    metric: varies
+    limit: see active Boeing services / digital agreement
+    notes: Per-customer request rate, concurrency, and quota windows governed by individual
+      contracts; no public values exist on boeing.com.
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: Backoff
+    description: Clients receiving a 429 should respect Retry-After when present and apply
+      exponential backoff with jitter.
+  - name: Contractual escalation
+    description: Throttling adjustments and quota raises are handled through the Boeing services /
+      digital customer success contact rather than self-service.
 maintainers:
   - FN: Kin Lane
-    email: kinlane@gmail.com
+    email: kin@apievangelist.com
