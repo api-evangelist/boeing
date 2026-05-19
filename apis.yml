@@ -185,6 +185,10 @@ apis:
         url: https://developer.boeing.com/
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Boeing
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/boeing
   - type: Website
     url: https://www.boeing.com
   - type: Portal
