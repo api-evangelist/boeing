@@ -186,6 +186,8 @@ apis:
         url: https://developer.boeing.com/
 
 common:
+  - type: DomainSecurity
+    url: security/boeing-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/Boeing
   - type: LinkedIn
@@ -196,6 +198,8 @@ common:
     url: https://developer.boeing.com/
   - type: APIDirectory
     url: https://developer.boeing.com/apis
+  - type: Blog
+    url: https://developer.boeing.com/category/whats-new/
 maintainers:
   - FN: Kin Lane
     email: kinlane@gmail.com
