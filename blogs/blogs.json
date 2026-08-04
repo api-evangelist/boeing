@@ -2,14 +2,10 @@
   "repo": "boeing",
   "feeds": [
     {
-      "source": "https://developer.boeing.com/category/whats-new/",
-      "error": "TimeoutError"
-    },
-    {
       "source": "https://developer.boeing.com/apis",
       "error": "TimeoutError"
     }
   ],
-  "fetched": "2026-07-11T11:50:51Z",
+  "fetched": "2026-08-01T15:49:00Z",
   "post_count": 15
 }
