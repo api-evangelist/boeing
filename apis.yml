@@ -114,6 +114,12 @@ apis:
     tags:
       - Aviation
       - Flight
+      - Event
+      - Real-Time
+      - Tracking
+    tags_raw:
+      - Aviation
+      - Flight
       - Events
       - Real-Time
       - Tracking
@@ -153,6 +159,10 @@ apis:
       - Aviation
       - Runway
       - Airports
+    tags_raw:
+      - Aviation
+      - Runway
+      - Airports
       - Operations
     properties:
       - type: Documentation
@@ -186,6 +196,11 @@ apis:
       to optimize departure timing and gate scheduling.
     humanURL: https://developer.boeing.com/apis/taxi-time-3
     tags:
+      - Aviation
+      - Taxi
+      - Airports
+      - Flight Planning
+    tags_raw:
       - Aviation
       - Taxi
       - Airports
