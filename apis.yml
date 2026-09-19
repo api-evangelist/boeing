@@ -39,6 +39,13 @@ tags:
   - Aviation
   - Airplanes
   - Aerospace
+  - Flights
+  - Aeronautical
+  - Fortune 100
+tags_raw:
+  - Aviation
+  - Airplanes
+  - Aerospace
   - Flight
   - Aeronautical
   - Fortune 100
@@ -124,7 +131,7 @@ apis:
     humanURL: https://developer.boeing.com/apis/boeing-flight-events-beta/
     tags:
       - Aviation
-      - Flight
+      - Flights
       - Event
       - Real-Time
       - Tracking
