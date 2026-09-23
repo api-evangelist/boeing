@@ -1,7 +1,9 @@
 ---
 title: News Releases | Boeing Newsroom
 url: https://boeing.mediaroom.com/news-releases-statements?item=131225
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Boeing" press release artificial intelligence'
 position: 1
 source: serpapi-google
