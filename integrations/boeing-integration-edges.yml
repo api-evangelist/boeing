@@ -1,3 +1,25 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://opcfoundation.org/products/
+- https://marketplace.odva.org/organizations
+- https://zapier.com/apps/boeing/integrations
+- https://n8n.io/integrations/boeing/
+- https://composio.dev/toolkits/boeing
+- https://monid.ai/tools/boeing
+checked:
+- https://marketplace.odva.org/organizations
+- https://opcfoundation.org/products/
+- https://repo.ros2.org/rosdistro_cache/humble-cache.yaml.gz
+- https://repo.ros2.org/rosdistro_cache/jazzy-cache.yaml.gz
+- https://repo.ros2.org/rosdistro_cache/kilted-cache.yaml.gz
+- https://repo.ros2.org/rosdistro_cache/rolling-cache.yaml.gz
+- https://composio.dev/toolkits/boeing
+- https://monid.ai/tools/boeing
+- https://n8n.io/integrations/boeing/
+- https://zapier.com/apps/boeing/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: Open Robotics (ROS package index)
   partner: null
@@ -30,15 +52,4 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-industrial-robotics.py
   first_seen: '2026-10-15'
-generated: '2026-10-15'
-method: searched
-source:
-- https://opcfoundation.org/products/
-- https://marketplace.odva.org/organizations
-checked:
-- https://marketplace.odva.org/organizations
-- https://opcfoundation.org/products/
-- https://repo.ros2.org/rosdistro_cache/humble-cache.yaml.gz
-- https://repo.ros2.org/rosdistro_cache/jazzy-cache.yaml.gz
-- https://repo.ros2.org/rosdistro_cache/kilted-cache.yaml.gz
-- https://repo.ros2.org/rosdistro_cache/rolling-cache.yaml.gz
+templates: []

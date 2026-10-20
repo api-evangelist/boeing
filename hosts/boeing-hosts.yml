@@ -1,0 +1,157 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 13
+  own: 11
+  other_domain: 0
+  platform: 2
+  roles:
+  - api
+  - marketing
+  - other
+  - source
+  - website
+hosts:
+- host: api.boeing.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: api
+  relation: own
+- host: businessjets.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: cascade.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: catalogs.shop.boeing.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: developer.boeing.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Portal
+  - APIDirectory
+  - Blog
+  serves:
+  - docs
+  - cdn
+  vendor: akamai
+  registrable_domain: boeing.com
+  role: marketing
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: investmentrecovery.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: investors.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: jobs.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: media-portal.boeing.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: services.boeing.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: boeing.com
+  role: other
+  relation: own
+- host: www.boeing.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: boeing.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform

@@ -1,12 +1,16 @@
 aid: boeing
+
 name: Boeing
+
 description: >-
   Boeing is an American multinational corporation that designs, manufactures, and
   sells airplanes, rotorcraft, rockets, satellites, and telecommunications equipment.
   Boeing Developer Tools provides aviation data APIs powered by Jeppesen aeronautical
   databases, covering aircraft models, airport data, airspace information, NOTAMs,
   flight events, and runway operations.
+
 type: Index
+
 deliveryModel:
   model: unknown
   open_source: false
@@ -18,6 +22,7 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: enterprise
   onboarding: unknown
@@ -30,11 +35,17 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boeing.png
+
 url: https://raw.githubusercontent.com/api-evangelist/boeing/refs/heads/main/apis.yml
+
 created: '2025-02-24'
+
 modified: '2026-04-21'
+
 specificationVersion: '0.23'
+
 tags:
   - Aviation
   - Airplanes
@@ -42,6 +53,7 @@ tags:
   - Flights
   - Aeronautical
   - Fortune 100
+
 tags_raw:
   - Aviation
   - Airplanes
@@ -49,6 +61,43 @@ tags_raw:
   - Flight
   - Aeronautical
   - Fortune 100
+
+maintainers:
+  - FN: Kin Lane
+    email: kinlane@gmail.com
+
+common:
+  - type: WellKnown
+    url: well-known/boeing-well-known.yml
+  - type: Hosts
+    url: hosts/boeing-hosts.yml
+  - type: IntegrationEdges
+    url: integrations/boeing-integration-edges.yml
+  - type: Vendors
+    url: vendors/boeing-vendors.yml
+  - type: PrivacyPolicy
+    url: https://www.boeing.com/privacy-and-cookie-policy
+  - type: Plans
+    url: plans/boeing-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/boeing-rate-limits.yml
+  - type: FinOps
+    url: finops/boeing-finops.yml
+  - type: DomainSecurity
+    url: security/boeing-domain-security.yml
+  - type: GitHubOrganization
+    url: https://github.com/Boeing
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/boeing
+  - type: Website
+    url: https://www.boeing.com
+  - type: Portal
+    url: https://developer.boeing.com/
+  - type: APIDirectory
+    url: https://developer.boeing.com/apis
+  - type: Blog
+    url: https://developer.boeing.com/category/whats-new/
+
 apis:
   - aid: boeing:boeing-aircraft-models-api
     name: Boeing Aircraft Models API
@@ -229,28 +278,21 @@ apis:
         url: https://developer.boeing.com/apis/taxi-time-3
       - type: Portal
         url: https://developer.boeing.com/
-
-common:
-  - type: Plans
-    url: plans/boeing-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/boeing-rate-limits.yml
-  - type: FinOps
-    url: finops/boeing-finops.yml
-  - type: DomainSecurity
-    url: security/boeing-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/Boeing
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/boeing
-  - type: Website
-    url: https://www.boeing.com
-  - type: Portal
-    url: https://developer.boeing.com/
-  - type: APIDirectory
-    url: https://developer.boeing.com/apis
-  - type: Blog
-    url: https://developer.boeing.com/category/whats-new/
-maintainers:
-  - FN: Kin Lane
-    email: kinlane@gmail.com
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: >-
+    Boeing Developer Tools (developer.boeing.com, Jeppesen aviation data APIs) publishes no OpenAPI, AsyncAPI or GraphQL contract on any probed host, and the portal stalled every fetch strategy including a headless browser from this run (TLS connects, no response).
+  evidence:
+  - url: https://www.boeing.com
+    status: 200
+  - url: https://developer.boeing.com/apis/aircraft-models/
+    status: 0
+  - url: https://api.boeing.com/
+    status: 404
+  checked: '2026-10-20'
+x-enrichment:
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v5
