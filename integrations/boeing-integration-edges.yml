@@ -8,15 +8,22 @@ source:
 - https://composio.dev/toolkits/boeing
 - https://monid.ai/tools/boeing
 checked:
+- https://cdn.winget.microsoft.com/cache
+- https://composio.dev/toolkits/boeing
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
 - https://marketplace.odva.org/organizations
+- https://monid.ai/tools/boeing
+- https://n8n.io/integrations/boeing/
 - https://opcfoundation.org/products/
+- https://pypi.org/pypi
+- https://registry.npmjs.org
 - https://repo.ros2.org/rosdistro_cache/humble-cache.yaml.gz
 - https://repo.ros2.org/rosdistro_cache/jazzy-cache.yaml.gz
 - https://repo.ros2.org/rosdistro_cache/kilted-cache.yaml.gz
 - https://repo.ros2.org/rosdistro_cache/rolling-cache.yaml.gz
-- https://composio.dev/toolkits/boeing
-- https://monid.ai/tools/boeing
-- https://n8n.io/integrations/boeing/
 - https://zapier.com/apps/boeing/integrations
 summary: null
 marketplace_apps: []
@@ -52,4 +59,34 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-industrial-robotics.py
   first_seen: '2026-10-15'
+- partner_name: Homebrew
+  partner: homebrew
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official CLI (Homebrew)
+  evidence: https://formulae.brew.sh/formula/config-file-validator
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Homebrew (public package index)
+    spec_file: null
+    packages:
+    - name: config-file-validator
+      kind: formula
+      version: 3.0.0
+      released: null
+      lapsed: false
+      page: https://formulae.brew.sh/formula/config-file-validator
+      cli: 'formula desc: CLI tool to validate different configuration file types'
+      repo_leg: github-org:boeing
+      publisher_leg: artifact-github-org:boeing
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  detected_by: sweep-official-clis.py
+  first_seen: '2026-10-20'
 templates: []
