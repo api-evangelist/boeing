@@ -34,3 +34,34 @@
     detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
+- slug: boeing-homebrew
+  label: Homebrew
+  partner: homebrew
+  partner_name: Homebrew
+  category: official CLI (Homebrew)
+  type: register
+  channel: package-registry
+  evidence: https://formulae.brew.sh/formula/config-file-validator
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Homebrew (public package index)
+    spec_file: null
+    packages:
+    - name: config-file-validator
+      kind: formula
+      version: 3.0.0
+      released: null
+      lapsed: false
+      page: https://formulae.brew.sh/formula/config-file-validator
+      cli: 'formula desc: CLI tool to validate different configuration file types'
+      repo_leg: github-org:boeing
+      publisher_leg: artifact-github-org:boeing
+      matched_by: github-org
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
