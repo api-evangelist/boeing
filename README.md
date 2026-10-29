@@ -64,45 +64,112 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Boeing is an American multinational corporation that designs, manufactures, and sells airplanes, rotorcraft, rockets, satellites, and telecommunications equipment. Boeing Developer Tools provides aviation data APIs powered by Jeppesen aeronautical databases for flight operations, dispatch, and aviation applications.
+Boeing is an American multinational corporation that designs, manufactures, and sells airplanes, rotorcraft, rockets, satellites, and telecommunications equipment. Boeing Developer Tools provides aviation data APIs powered by Jeppesen aeronautical databases, covering aircraft models, airport data, airspace information, NOTAMs, flight events, and runway operations.
 
-**URL:** [View APIs.yml](https://raw.githubusercontent.com/api-evangelist/boeing/refs/heads/main/apis.yml)
+**Areas:** Aviation · Airplanes · Aerospace · Flights · Aeronautical · Fortune 100
 
-## APIs
+## Boeing on APIs.io
 
-### Boeing Aircraft Models API
-Model characteristics for commercial and business aviation aircraft including ICAO/IATA codes, engine specifications, wingspan, weight, and height. Updated on the 28-day AIRAC cycle.
+Everything profiled for Boeing is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/boeing/](https://apis.io/providers/boeing/)** — or go straight to one of the APIs or properties below.
 
-### Boeing Airports and Aerodromes API
-Current, worldwide aerodrome data from Jeppesen's aeronautical database for global flight operations.
+### APIs (9)
 
-### Boeing Airspaces API
-Detailed, current information about airspace classifications and boundaries worldwide for flight planning.
+- [Boeing Aircraft Models API](https://apis.io/apis/boeing/boeing-aircraft-models-api/) — The Boeing Aircraft Models API provides model characteristics of commercial and business aviation aircraft including ICAO/IATA codes, engine specifications,…
+- [Boeing Airports and Aerodromes API](https://apis.io/apis/boeing/boeing-airports-aerodromes-api/) — The Boeing Airports and Aerodromes API provides current, worldwide aerodrome data from Jeppesen's aeronautical database, including airport identifiers,…
+- [Boeing Airspaces API](https://apis.io/apis/boeing/boeing-airspaces-api/) — The Boeing Airspaces API provides detailed, current information about airspace classifications and boundaries around the globe to support flight planning…
+- [Boeing Parts API](https://apis.io/apis/boeing/boeing-parts-api/) — The Boeing Parts API enables searching and requesting price and availability information for specific Boeing aircraft parts, supporting maintenance, repair,…
+- [Boeing Flight Events API](https://apis.io/apis/boeing/boeing-flight-events-api/) — The Boeing Flight Events API (Beta) provides real-time insights into worldwide flight events, enabling flight tracking applications and operational control…
+- [Boeing NOTAMs API](https://apis.io/apis/boeing/boeing-notams-api/) — The Boeing NOTAMs API provides access to Jeppesen's global Notices to Air Missions (NOTAMs) database, enabling flight planning systems to retrieve current…
+- [Boeing Runway Monitor API](https://apis.io/apis/boeing/boeing-runway-monitor-api/) — The Boeing Runway Monitor API provides active runway information for arrivals and departures at airports around the world, supporting dispatch and…
+- [Boeing Standard Minimums API](https://apis.io/apis/boeing/boeing-standard-minimums-api/) — The Boeing Standard Minimums API provides worldwide, detailed, and current information about instrument approach standard minimums for airports globally,…
+- [Boeing Taxi Time API](https://apis.io/apis/boeing/boeing-taxi-time-api/) — The Boeing Taxi Time API provides current taxi time information at airports around the world, enabling airline operations and flight planning systems to…
 
-### Boeing Parts API
-Search and request price and availability for specific Boeing aircraft parts supporting MRO operations.
+### Published properties
 
-### Boeing Flight Events API (Beta)
-Real-time insights into worldwide flight events for flight tracking and operational control systems.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Boeing NOTAMs API
-Access to Jeppesen's global Notices to Air Missions database for flight planning and safety.
+#### Security (1)
 
-### Boeing Runway Monitor API
-Active runway information for arrivals and departures at airports worldwide.
+Authentication, trust centre, and vulnerability disclosure.
 
-### Boeing Standard Minimums API
-Worldwide instrument approach standard minimums for airports supporting flight dispatch.
+- [Boeing Domain Security](https://apis.io/security/boeing/boeing-domain-security/)
 
-### Boeing Taxi Time API
-Current taxi time information at airports worldwide for departure timing and gate scheduling optimization.
+#### Plans and pricing (1)
 
-## Links
+Published plans, tiers and prices.
+
+- [Boeing Plans Pricing](https://apis.io/plans/boeing/boeing-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Boeing Rate Limits](https://apis.io/rate-limits/boeing/boeing-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Boeing Finops](https://apis.io/finops/boeing/boeing-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.boeing.com)
-- [Developer Portal](https://developer.boeing.com/)
-- [API Directory](https://developer.boeing.com/apis)
+- [Blog](https://developer.boeing.com/category/whats-new/)
+- [Privacy policy](https://www.boeing.com/privacy-and-cookie-policy)
+- [GitHub](https://github.com/Boeing)
 
-## Maintainers
+## API Evangelist rating
 
-- **Kin Lane** - kinlane@gmail.com
+**Kin Score 13.6** — emerging · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 15.5 |
+| Access clarity | 15.8 |
+
+**Agent readiness 14.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/boeing/](https://apis.io/providers/boeing/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Boeing: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/boeing/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
