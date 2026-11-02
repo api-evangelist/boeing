@@ -1,0 +1,78 @@
+name: Boeing API Plans
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Boeing
+providerId: boeing
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Aviation
+  - Airplanes
+  - Aerospace
+  - Flight
+  - Aeronautical
+description: Boeing is an aerospace OEM and services provider. Its commercial offerings (commercial
+  airplanes, defense & space, services) are not exposed via a public API rate card; digital aviation
+  products such as Jeppesen and ForeFlight have their own product catalogs but are sold under
+  enterprise / fleet contracts. boeing.com does not publish per-API pricing.
+sources:
+  - https://www.boeing.com
+notes: Public Boeing site does not list developer / API pricing. Reconcile separately against any
+  Jeppesen, ForeFlight, or Boeing Digital Aviation Solutions contract in scope.
+plans:
+  - id: boeing-services-enterprise
+    name: Boeing Services / Digital (Contact Sales)
+    type: enterprise
+    description: Custom-negotiated subscriptions for Boeing Global Services, Digital Aviation
+      Solutions, Jeppesen, and related fleet / operations products.
+    entries:
+      - label: Services / digital subscription
+        name: services_subscription
+        type: subscription
+        metric: varies
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+      - label: Per-aircraft / per-fleet pricing
+        name: fleet_pricing
+        type: tiered
+        metric: varies
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Boeing Global Services
+      - name: Digital Aviation Solutions
+      - name: Jeppesen navigation, charts, and flight planning
+      - name: ForeFlight (Boeing-owned consumer / corporate aviation app)
+      - name: Custom SLA and support
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Boeing Services / Digital (Contact Sales)
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
